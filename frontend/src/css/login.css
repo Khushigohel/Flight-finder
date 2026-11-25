@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; 
+}
+
+.login-container {
+  height: 100vh; 
+  width: 100%;
+  background-image: url("https://t4.ftcdn.net/jpg/02/71/78/29/360_F_271782927_keMVFo9PnBwrMEmbiUGKRcDT2rzf85dj.jpg");
+  background-size: cover;     
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  padding-right: 10%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.login-card {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  width: 360px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+   margin-top: 80px;
+}
+
+.login-card h2 {
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+.login-card input:-webkit-autofill,
+.login-card input:-webkit-autofill:hover, 
+.login-card input:-webkit-autofill:focus, 
+.login-card input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: #333 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  color: black;
+}
+
+.forgot-password {
+  text-align: right;
+  font-size: 13px;
+  margin-bottom: 15px;
+  color: #1e3a8a;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-card button {
+  width: 104%;
+  padding: 12px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-card button:hover {
+  background: #162d6b;
+}
+
+.create-account {
+  text-align: center;
+  margin-top: 18px;
+  color: #162d6b;
+  font-size: 14px;
+}
+
+.create-account strong {
+  color: #102254;
+  cursor: pointer;
+}
+
+.create-account strong:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  margin: 18px 0;
+  text-align: center;
+  font-size: 13px;
+  color: rgb(19, 19, 19);
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  background: transparent;        /* Transparent */
+  color: white;                   /* White text */
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.google-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: white;
+}
+
+.google-icon {
+  width: 18px;
+  height: 18px;
+  background: white;     /* keeps logo visible */
+  border-radius: 50%;
+  padding: 2px;
+}
+.login-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    color:#091c43;   /* soft gray */
+}
+
+.login-link a {
+    color: #08235d;   /* blue */
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #1d4ed8;   /* darker blue */
+    text-decoration: underline;
+}
+
+/* password eye css*/
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 40px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+}

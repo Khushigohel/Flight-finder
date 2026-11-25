@@ -1,0 +1,96 @@
+/* Card specific styling */
+.otp-card {
+    text-align: center;
+    padding: 40px !important;
+}
+
+.otp-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Grouping the 6 boxes */
+.otp-input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+/* Individual Box Design */
+.otp-box {
+    width: 45px;
+    height: 55px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+/* Active box highlight */
+.otp-box:focus {
+    border-color: #1a3a8a; /* Your brand blue */
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 58, 138, 0.2);
+}
+
+.verify-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a3a8a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.resend-text {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.resend-btn {
+    background: none;
+    border: none;
+    color: #1a3a8a;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+}
+.resend-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.resend-text {
+    font-size: 14px;
+    color: #444; /* Dark gray for better visibility */
+    margin: 0;
+}
+
+.timer-text strong {
+    color: #1a3a8a; /* Blue color for the seconds */
+}
+
+.resend-link-btn {
+    background: none;
+    border: none;
+    color: #1a3a8a; /* Matching your button blue */
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    margin-left: 5px;
+    font-size: 14px;
+}
+

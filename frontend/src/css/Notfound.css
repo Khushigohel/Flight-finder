@@ -1,0 +1,130 @@
+/* BACKGROUND */
+.flight404-wrapper {
+    height: 100vh;
+    background: radial-gradient(circle at top, #0f2a44, #081421);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+/* ROUTE LINES */
+.routes-found {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.route-line-found {
+    fill: none;
+    stroke: rgba(255,255,255,0.2);
+    stroke-width: 2;
+    stroke-dasharray: 6 6;
+    animation: dashMove 10s linear infinite;
+}
+
+@keyframes dashMove {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: -100; }
+}
+
+/* PLANES */
+.plane {
+    position: absolute;
+    font-size: 20px;
+}
+
+/* FOLLOW CURVE */
+.plane1 {
+    offset-path: path("M0,300 Q600,100 1200,300");
+    animation: flyCurve 8s linear infinite;
+}
+
+.plane2 {
+    offset-path: path("M0,400 Q600,200 1200,400");
+    animation: flyCurve 10s linear infinite;
+}
+
+.plane3 {
+    offset-path: path("M1200,250 Q600,450 0,250");
+    animation: flyReverse 9s linear infinite;
+}
+
+/* CURVE MOTION */
+@keyframes flyCurve {
+    0% {
+        offset-distance: 0%;
+        transform: scale(0.8);
+    }
+    70% {
+        transform: scale(1); /* slow near center */
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+@keyframes flyReverse {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+/* CARD */
+.flight404-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    padding: 50px 60px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+/* RADAR EFFECT */
+.flight404-card::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0,200,255,0.3), transparent);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+    100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+/* TEXT */
+.code-found {
+    font-size: 100px;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* BUTTON */
+.found-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #1a73e8, #00c6ff);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
