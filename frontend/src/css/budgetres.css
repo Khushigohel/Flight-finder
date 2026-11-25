@@ -1,0 +1,349 @@
+/* 🔵 TOP BLUE HEADER */
+.budget-hero {
+  background: linear-gradient(135deg, #08213a, #2243b0);
+  padding: 165px 20px 100px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.budget-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #f5f7fa;
+  border-top-left-radius: 50% 40px;
+  border-top-right-radius: 50% 40px;
+}
+
+.budget-hero-content h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.budget-hero-content p {
+  margin-top: 10px;
+  color: #cbd5e1;
+}
+
+/* ⚪ WHITE SECTION */
+.budget-results {
+  background: #f5f7fa;
+  padding: 60px 20px;
+  min-height: 100vh;
+   padding-bottom: 120px;
+}
+
+.budget-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  transform: translateY(-50px);
+  position: relative;
+  z-index: 2;
+}
+.flight-count {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 3px;
+}
+/* CARD LAYOUT */
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.city-icon {
+  font-size: 24px;
+}
+/* HEADER */
+.flight-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.flight-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-weight: 600;
+  color: #1f2937;
+}
+.route-line {
+  flex: 1;
+  height: 1px;
+  background: #d1d5db;
+  margin: 0 10px;
+  position: relative;
+}
+
+/* plane centered on line */
+.plane {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.budget-card:hover .plane {
+  transform: translateX(-50%) translateY(-2px) scale(1.1);
+}
+/* TIME */
+.flight-time {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.flight-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* VIEW BUTTON */
+.view-btn {
+  font-size: 14px;
+  color: #2563eb;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.budget-card:hover .view-btn {
+  transform: translateX(5px);
+}
+/* TEXT */
+.budget-city {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a2540;
+}
+
+.budget-airport {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* DIVIDER */
+.card-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 15px 0;
+}
+
+/* BOTTOM SECTION */
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-label {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.budget-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2563eb;
+}
+.budget-card {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(211, 207, 207, 0.08);
+  text-align: center;
+    text-align: left; 
+}
+.budget-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.budget-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  transition: 0.4s ease;
+}
+
+.budget-card:hover::before {
+  left: 0;
+}
+
+/* ✨ CLEAN HOVER */
+.budget-card:hover {
+  transform: translateY(-8px);
+  background: #f8fafc; 
+  border: 1px solid #2563eb;
+}
+.budget-card * {
+  transition: all 0.25s ease;
+}
+ .budget-card:hover .budget-city {
+  color: #1d4ed8;
+}
+
+.budget-card:hover .budget-price {
+  color: #1d4ed8;
+}
+.budget-card:hover {
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.budget-card {
+  animation: fadeUp 0.6s ease forwards;
+}
+.budget-card:nth-child(1) { animation-delay: 0.1s; }
+.budget-card:nth-child(2) { animation-delay: 0.2s; }
+.budget-card:nth-child(3) { animation-delay: 0.3s; }
+
+@media (max-width: 900px) {
+  .budget-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .budget-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* FULL CENTER SCREEN */
+.no-data {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fa;
+}
+
+/* CARD BOX */
+.no-data-box {
+  background: white;
+  padding: 40px 50px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  animation: fadeUp 0.5s ease;
+}
+
+/* ICON */
+.no-data-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.no-data-box h2 {
+  font-size: 22px;
+  color: #0a2540;
+}
+
+.no-data-box p {
+  margin: 10px 0 20px;
+  color: #6b7280;
+}
+
+/* BUTTON */
+.back-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+
+/* fgf */
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.no-results-box {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  max-width: 400px;
+  width: 100%;
+}
+.no-results-box {
+  animation: fadeUp 0.5s ease;
+}
+
+.no-results-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.no-results-box h3 {
+  font-size: 20px;
+  color: #0a2540;
+  margin-bottom: 10px;
+}
+
+.no-results-box p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.retry-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.retry-btn:hover {
+  background: #1d4ed8;
+}

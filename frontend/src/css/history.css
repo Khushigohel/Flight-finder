@@ -1,0 +1,137 @@
+/* history.css */
+.history-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #05203c 0%, #1a5ea7 100%); /* Premium Gradient */
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 60px;
+}
+
+.history-content-area {
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.history-header-section {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.history-scroll-icon { font-size: 3rem; margin-bottom: 10px; }
+.history-header-section h1 { font-size: 2.4rem; font-weight: 800; }
+
+.history-grid-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Professional Card */
+.pro-history-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px 35px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-left: 6px solid #0071eb;
+  transition: 0.3s ease;
+}
+
+.pro-history-card:hover { transform: translateY(-5px); }
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+/* Route Display Styling */
+.route-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.city-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.city-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #05203c;
+}
+
+.route-visual {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0071eb;
+}
+
+.dot { width: 8px; height: 8px; background: #ddd; border-radius: 50%; }
+.plane-path { font-size: 1.4rem; transform: rotate(45deg); }
+
+/* Side info & Tags */
+.card-side-info {
+  text-align: right;
+}
+
+.date-badge-pro {
+  background: #f1f7ff;
+  color: #0071eb;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.trip-tag-pro {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.ow { color: #0770e3; background: #e3f2fd; }
+.rt { color: #ef6c00; background: #fff3e0; }
+
+.card-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-meta { font-size: 0.8rem; color: #999; }
+
+.pro-find-btn {
+  background: #0071eb;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.plane-path {
+  font-size: 1.4rem;
+  transform: rotate(90deg);
+}
+
+.pro-find-btn:hover { background: #005bb7; box-shadow: 0 5px 15px rgba(0,113,235,0.4); }

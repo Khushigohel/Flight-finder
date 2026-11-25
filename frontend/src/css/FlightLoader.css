@@ -1,0 +1,103 @@
+.loader-wrapper{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:#f7f9fb;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  z-index:9999;
+}
+
+/* progress bar */
+
+.progress-bar{
+  position:absolute;
+  top:0;
+  left:0;
+  height:4px;
+  width:40%;
+  background:#472781;
+  animation:progressMove 3.5s infinite linear;
+}
+.progress-bar::before{
+  content:"";
+  position:absolute;
+  height:4px;
+  width:200px;
+  background:#472781;
+  animation:progressMove 10s ease-in-out infinite;
+}
+
+@keyframes progressMove{
+  0%{
+    transform:translateX(-200px);
+  }
+  100%{
+    transform:translateX(100vw);
+  }
+}
+/* center area */
+
+.loader-center{
+  text-align:center;
+}
+
+/* plane track */
+
+.plane-container{
+  position:relative;
+  width:400px;
+  height:120px;
+  margin-bottom:30px;
+}
+
+/* line */
+
+.line-loader{
+  position:absolute;
+  top:55%;
+  left:0;
+  width:100%;
+  height:4px;
+  background:#dcdcdc;
+}
+
+/* plane */
+
+.plane-icon-loader{
+  position:absolute;
+  top:30%;
+  width:70px;        /* bigger plane */
+  height:auto;
+  animation:fly 5.5s linear infinite;
+}
+
+@keyframes fly{
+
+  0%{
+    left:-70px;
+    transform:rotate(-8deg);
+  }
+
+  50%{
+    transform:rotate(0deg);
+  }
+
+  100%{
+    left:400px;
+    transform:rotate(8deg);
+  }
+
+}
+/* text */
+
+.loader-text{
+  font-size:22px;
+  font-weight:600;
+  color:#333;
+  letter-spacing:0.4px;
+}
